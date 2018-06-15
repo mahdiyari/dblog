@@ -1,0 +1,26 @@
+<div class="col-sm-8">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      Profile
+    </div>
+    <div id="profile_page_first_container" class="panel-body">
+      <div class="row" style="margin:5px;">
+        
+          <div class="col-sm-4">
+            <img id="profile_user_image" class="img-responsive img-circle" src="{{ dash.Profile_img() }}">
+          </div>
+        
+        <div id="profile_user_details" class="col-sm-8 well" style="float:left !important;">
+          <p><strong>Name: </strong><span>{{ dash.Profile_name() }}</span></p>
+          <p><strong>Reputation: </strong><span>{{ dash.Profile_reputation() }}</span></p>
+          <p><strong>About: </strong><span>{{ dash.Profile_about() }}</span></p>
+          <p><strong>Location: </strong><span>{{ dash.Profile_location() }}</span></p>
+          <p><strong>Website: </strong><span>{{ dash.Profile_website() }}</span></p>
+          <p><strong>Account creation: </strong><span>{{ dash.Profile_age() }}</span></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+<!-- Home page content -->
+<div class="container">
+  <div class="container jum-container">
+    <div class="jumbotron">
+      <h2>OnSteem</h2>
+      <p>Made by professionals for professionals. <br>
+         Login and enjoy exploring Steem blockchain in the many ways.</p>
+      <p><a *ngIf="!isAuth()" class="btn btn-primary btn-lg" onclick="$('#loginmodal').modal('show');" role="button">Login</a>
+      <a *ngIf="isAuth()" class="btn btn-primary btn-lg" routerLink="/dashboard" role="button">Your dashboard</a> </p>
+    </div>
+  </div>
+</div>

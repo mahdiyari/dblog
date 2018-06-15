@@ -1,0 +1,37 @@
+<div class="panel panel-success">
+  <div class="panel-heading">
+    Information
+  </div>
+  <div class="panel-body">
+    Voting power:
+    <div class="progress">
+      <div id="" class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+      [attr.aria-valuenow]="dash.Profile_votingpower()" aria-valuemin="0" aria-valuemax="100" 
+      [ngStyle]="{'width': dash.Profile_votingpower()+'%'}">
+        {{ dash.Profile_votingpower() }}%
+      </div>
+    </div>
+    Bandwidth: <span id="user_bandwidth_amount"></span>
+    <div class="progress">
+      <div id="" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" 
+      [attr.aria-valuenow]="dash.Profile_bandwidthpercent()" aria-valuemin="0" aria-valuemax="100" 
+      [ngStyle]="{'width': dash.Profile_bandwidthpercent()+'%'}">
+        {{ dash.Profile_bandwidthpercent() }}%
+      </div>
+    </div>
+  </div>
+  <table class="table">
+    <tr>
+      <td>STEEM:</td>
+      <td>{{ dash.Account_steem() }}</td>
+    </tr>
+    <tr>
+      <td>STEEM DOLLARS:</td>
+      <td>{{ dash.Account_sbd() }}</td>
+    </tr>
+    <tr>
+      <td>SEEM POWER:</td>
+      <td>{{ dash.Account_sp() }}</td>
+    </tr>
+  </table>
+</div>

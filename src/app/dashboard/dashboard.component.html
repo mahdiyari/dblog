@@ -1,0 +1,31 @@
+<div id="profile_div" *ngIf="isAuth()">
+  <div class="container">
+    <!-- left sidebar -->
+    <div class="col-sm-4">
+      <!-- including announcement component -->
+      <app-announcement></app-announcement>
+      <!-- including child information component -->
+      <app-dashboard-info></app-dashboard-info>
+    </div>
+    <!-- including child profile component -->
+    <app-dashboard-profile></app-dashboard-profile>
+  </div>
+    <!-- start last posts -->
+  <!-- <div class="container">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        Last posts in SteemClient
+      </div>
+      <div class="panel-body">
+        <div class="row" id="profile_last_posts_container" style="margin:5px;">
+
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+  
+  
+  
+</div>
+  

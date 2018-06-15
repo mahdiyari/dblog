@@ -1,0 +1,8 @@
+@media (max-width: 520px){
+	.navbar-fixed-bottom {
+        position: unset;
+    }
+    body{
+        min-height: 100%;
+    }
+}
