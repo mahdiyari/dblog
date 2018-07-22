@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { DashboardComponent } from '../dashboard.component';
+import { Component, OnInit } from '@angular/core'
+import { DashboardComponent } from '../dashboard.component'
 
 @Component({
   selector: 'app-dashboard-profile',

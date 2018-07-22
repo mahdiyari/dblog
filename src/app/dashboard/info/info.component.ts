@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { DashboardComponent } from '../dashboard.component';
+import { Component, OnInit, Input } from '@angular/core'
+import { DashboardComponent } from '../dashboard.component'
 
 @Component({
   selector: 'app-dashboard-info',

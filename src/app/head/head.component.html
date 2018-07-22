@@ -31,7 +31,7 @@
             <a routerLink="/dashboard">Dashboard</a>
           </li>
           <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            <a routerLink="/posts">Posts</a>
+            <a routerLink="/@{{ User().user }}">My Blog</a>
           </li>
         </ul>
       </li>
