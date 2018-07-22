@@ -1,0 +1,22 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    User info
+  </div>
+  <div class="panel-body">
+    <div class="row" id="profile_last_posts_container" style="margin:5px;">
+      <div class="blog-info-avatar-div">
+        <img class="img-circle blog-info-avatar-img"
+        [src]="printUserInfo().avatar" alt="avatar" />
+        <br><br>
+        <i style="font-size: 18px; color: lightblue" class="glyphicon glyphicon-user"></i>
+        <b style="font-size: 20px">
+          {{ printUserInfo().publicName }}
+        </b>
+        <br>
+        <div style="text-align: left" class="blog-info-about">
+          {{ printUserInfo().about }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

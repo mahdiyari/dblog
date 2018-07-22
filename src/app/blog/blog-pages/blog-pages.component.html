@@ -1,0 +1,20 @@
+<div>
+  <form onsubmit="false" class="form-inline">
+    <label for="pages">Pages: </label>
+    <select name="pages" class="form-control" (change)="_blog.changePage($event)" [(ngModel)]="_blog.page">
+      <option *ngFor="let page of _blog.pages(); index as i" value="{{ i+1 }}">
+        Page {{ i+1 }}
+      </option>
+    </select>
+    <div style="float: right">
+      <button class="btn btn-primary" [attr.disabled]="_blog.page<2?'':null"
+      (click)="_blog.changePage(_blog.page-1)">
+        <span aria-hidden="true">&larr;</span> Previous
+      </button>
+      <button class="btn btn-primary" [attr.disabled]="_blog.page>_blog.pages().length-1?'':null"
+      (click)="_blog.changePage(_blog.page+1)">
+        Next <span aria-hidden="true">&rarr;</span>
+      </button>
+    </div>
+  </form>
+</div>

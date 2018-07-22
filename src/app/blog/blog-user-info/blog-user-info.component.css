@@ -1,0 +1,15 @@
+
+.blog-info-avatar-div {
+  text-align: center;
+}
+.blog-info-avatar-img {
+  width: 100%;
+  max-width:230px;
+}
+.blog-info-about {
+  padding: 5px;
+  margin: -7px;
+  margin-top: 8px;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+}

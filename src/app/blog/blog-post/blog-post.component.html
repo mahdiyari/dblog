@@ -1,0 +1,35 @@
+<ng-template #postsTemp let-postContent="postContent">
+  <div style="height: 350px; overflow: hidden; padding-right: 2px; padding-left: 2px"
+  class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 card grid-item">
+    <div class="thumbnail" style="height: 340px; overflow: hidden;">
+      <div style="height: 295px">
+        <div style="text-align: center">
+            <img [src]="postContent.image" style="max-height: 150px;">
+        </div>
+        <div class="caption" style="height: 145px">
+          <h5 id="thumbnail-label"><strong>{{ postContent.title }}</strong></h5>
+          <p>{{ postContent.desc }}</p>
+        </div>
+      </div>
+      <div class="caption card-footer">
+        <ul style="margin-bottom: 0" class="list-inline">
+          <li><i class="glyphicon glyphicon-time"></i></li>
+          <li title="{{ post.timestamp*1000 | timeAgo }}">{{ post.timestamp*1000 | timeAgo | shortTimeAgo }}</li>
+          <li style="float:right"><i class="glyphicon glyphicon-thumbs-up"></i></li>
+          <div style="float:right" class="dropup">
+            <li class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ postContent.value }}<span class="caret"></span>
+            </li>
+            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+              <li style="padding: 2px 6px" *ngFor="let vote of postContent.votes; let even = even; let odd = odd"
+              [ngClass]="{ odd : odd, even : even }">
+                <span>{{ vote.voter +': $'+ vote.value }}</span>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<ng-container *ngTemplateOutlet="postsTemp; context: {postContent: printPostContent(post.author, post.permlink, post.postid)}"></ng-container>
