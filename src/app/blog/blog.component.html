@@ -1,0 +1,26 @@
+    <!-- start last posts -->
+<div class="container">
+  <div class="col col-sm-3">
+    <app-blog-user-info [user]="user"></app-blog-user-info>
+  </div>
+  <div class="col col-sm-9">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+          Recent posts
+        </div>
+        <div class="panel-body">
+          <app-blog-pages *ngIf="posts.length > postsPerPage"></app-blog-pages>
+          <app-blog-bad-sync *ngIf="badsync()" [user]="user"></app-blog-bad-sync>
+          <app-blog-notfound *ngIf="notFound()" [user]="user"></app-blog-notfound>
+          <app-blog-syncing *ngIf="syncing()" [user]="user"></app-blog-syncing>
+          <div *ngIf="!notFound() && !syncing()" class="row grid" style="margin:5px;">
+            <app-blog-nopost *ngIf="!posts.length" [user]="user"></app-blog-nopost>
+            <app-blog-post *ngFor='let post of posts.slice(startPost,endPost)'
+            [post]="post" [printPostContent]="printPostContent">
+            </app-blog-post>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+</div>
