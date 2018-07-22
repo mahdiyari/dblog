@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { MyService } from './my.service';
+import { Component } from '@angular/core'
+import { MyService } from './services/my.service'
 
 @Component({
   selector: 'app-root',
@@ -7,11 +7,10 @@ import { MyService } from './my.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Our bigg!';
   constructor(public _myService:MyService){
-    console.log(_myService.test);
+    console.log(_myService.test)
   }
   ngOnInit(){
-    console.log('initied');
+    console.log('initied')
   }
 }
