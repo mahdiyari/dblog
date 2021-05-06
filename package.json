@@ -33,7 +33,7 @@
     "postcss": "^7.0.1",
     "remarkable": "^1.7.1",
     "rxjs": "^6.0.0",
-    "sanitize-html": "^1.14.1",
+    "sanitize-html": "^2.3.2",
     "sc2-sdk": "^1.0.2",
     "srcset": "^1.0.0",
     "steem": "^0.7.1",
