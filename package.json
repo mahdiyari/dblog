@@ -30,7 +30,7 @@
     "dsteem": "^0.8.7",
     "express": "^4.16.3",
     "path": "^0.12.7",
-    "postcss": "^7.0.1",
+    "postcss": "^7.0.36",
     "remarkable": "^1.7.1",
     "rxjs": "^6.0.0",
     "sanitize-html": "^1.14.1",
