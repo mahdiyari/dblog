@@ -28,7 +28,7 @@
     "array-uniq": "^2.0.0",
     "core-js": "^2.5.4",
     "dsteem": "^0.8.7",
-    "express": "^4.16.3",
+    "express": "^4.18.2",
     "path": "^0.12.7",
     "postcss": "^7.0.1",
     "remarkable": "^1.7.1",
